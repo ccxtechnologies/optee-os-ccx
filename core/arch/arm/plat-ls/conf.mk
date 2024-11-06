@@ -44,6 +44,14 @@ CFG_DT ?= y
 CFG_EXTERNAL_DTB_OVERLAY = y
 endif
 
+ifeq ($(PLATFORM_FLAVOR),ls1046accx)
+include core/arch/arm/cpu/cortex-armv8-0.mk
+$(call force,CFG_TEE_CORE_NB_CORE,4)
+$(call force,CFG_DRAM0_SIZE,0x80000000)
+$(call force,CFG_CORE_CLUSTER_SHIFT,2)
+CFG_SHMEM_SIZE ?= 0x00200000
+endif
+
 ifeq ($(PLATFORM_FLAVOR),ls1088ardb)
 include core/arch/arm/cpu/cortex-armv8-0.mk
 $(call force,CFG_TEE_CORE_NB_CORE,8)

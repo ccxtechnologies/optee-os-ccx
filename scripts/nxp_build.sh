@@ -51,6 +51,7 @@ boards_list=(
 	ls-ls1012ardb \
 	ls-ls1043ardb \
 	ls-ls1046ardb \
+	ls-ls1046accx \
 	ls-ls1088ardb \
 	ls-ls2088ardb \
 	ls-lx2160ardb \

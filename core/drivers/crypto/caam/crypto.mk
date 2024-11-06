@@ -31,7 +31,7 @@ caam-drivers = RNG BLOB
 # CAAM default drivers connected to the HW crypto API
 caam-crypto-drivers = CIPHER HASH HMAC CMAC AE_CCM
 
-ifneq (,$(filter $(PLATFORM_FLAVOR),ls1012ardb ls1043ardb ls1046ardb))
+ifneq (,$(filter $(PLATFORM_FLAVOR),ls1012ardb ls1043ardb ls1046ardb ls1046accx))
 $(call force, CFG_CAAM_BIG_ENDIAN,y)
 $(call force, CFG_JR_BLOCK_SIZE,0x10000)
 $(call force, CFG_JR_INDEX,2)
