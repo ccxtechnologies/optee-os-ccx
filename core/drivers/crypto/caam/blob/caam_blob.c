@@ -70,6 +70,8 @@ out:
 	return res;
 }
 
+#ifndef CFG_HW_UNQ_KEY_REQUEST
+
 TEE_Result tee_otp_get_hw_unique_key(struct tee_hw_unique_key *hwkey)
 {
 	COMPILE_TIME_ASSERT(sizeof(hwkey->data) <= sizeof(stored_key));
@@ -80,3 +82,5 @@ TEE_Result tee_otp_get_hw_unique_key(struct tee_hw_unique_key *hwkey)
 	memcpy(&hwkey->data, &stored_key, sizeof(hwkey->data));
 	return TEE_SUCCESS;
 }
+
+#endif
