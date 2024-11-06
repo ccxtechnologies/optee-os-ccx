@@ -26,6 +26,7 @@
 #elif defined(PLATFORM_FLAVOR_ls1046ardb) || \
 	defined(PLATFORM_FLAVOR_ls1046accx) || \
 	defined(PLATFORM_FLAVOR_ls1043ardb) || \
+	defined(PLATFORM_FLAVOR_ls1012accx) || \
 	defined(PLATFORM_FLAVOR_ls1012ardb)
 #define DTB_JR_PATH "/soc/crypto@1700000/jr"
 #elif defined(PLATFORM_FLAVOR_ls1028ardb) || \
