@@ -29,6 +29,7 @@ include core/arch/arm/cpu/cortex-armv8-0.mk
 $(call force,CFG_TEE_CORE_NB_CORE,1)
 $(call force,CFG_DRAM0_SIZE,0x40000000)
 $(call force,CFG_CORE_CLUSTER_SHIFT,2)
+$(call force,CFG_INSECURE,n)
 CFG_NUM_THREADS ?= 2
 CFG_SHMEM_SIZE ?= 0x00200000
 CFG_DT ?= y
@@ -61,6 +62,7 @@ include core/arch/arm/cpu/cortex-armv8-0.mk
 $(call force,CFG_TEE_CORE_NB_CORE,4)
 $(call force,CFG_DRAM0_SIZE,0x80000000)
 $(call force,CFG_CORE_CLUSTER_SHIFT,2)
+$(call force,CFG_INSECURE,n)
 CFG_SHMEM_SIZE ?= 0x00200000
 CFG_DT ?= y
 CFG_EXTERNAL_DTB_OVERLAY = y
